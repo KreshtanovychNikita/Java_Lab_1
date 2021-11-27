@@ -11,7 +11,7 @@ public class DetalTest {
         Detal detal = new Detal.Builder()
                 .addIdDetal()
                 .addName("b")
-                //.addIdProizvoditel(UUID.randomUUID())
+                .addIdProizvoditel(UUID.randomUUID())
                 .addArticul('5')
                 .addPrice(1589)
                 .build();

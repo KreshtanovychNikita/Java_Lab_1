@@ -12,8 +12,8 @@ public class PostavkiTest {
         Postavki postavki = new Postavki.Builder()
                 .addIdPostavki()
                 .addName("c")
-                //.addDate()
-                //.addIdDetal(UUID.randomUUID())
+                .addDate()
+                .addIdDetal(UUID.randomUUID())
                 .build();
 
     }
