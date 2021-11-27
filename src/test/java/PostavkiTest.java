@@ -1,5 +1,6 @@
 import org.testng.annotations.Test;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -21,16 +22,19 @@ public class PostavkiTest {
     @Test
     public void UnmutableDataAfterCreating(){
         UUID id = UUID.randomUUID();
+        UUID detalid = UUID.randomUUID();
+        LocalDate date = LocalDate.now();
         Postavki postavki = new Postavki.Builder()
                 .addIdPostavki(id)
                 .addName("c")
-                .addDate()
+                .addDate(date)
+                .addIdDetal(detalid)
                 .build();
 
-       // assertEquals(postavki.getDate(),"2021");
+        assertEquals(postavki.getDate(),date);
         assertEquals(postavki.getName(),"c");
         assertEquals(postavki.getIdp(),id);
-        //assertEquals(postavki.getIdDetal(), id);
+        assertEquals(postavki.getIdDetal(), detalid);
 
     }
 }
